@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS denomination (
                                             bagged_quantity INT,
                                             bundled_quantity INT,
                                             plastic_quantity INT,
-                                            version INT
+                                            version BIGINT
 );

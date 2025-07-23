@@ -5,4 +5,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DenominationRepository extends ListCrudRepository<Denomination, Integer> {
+    Denomination findByName(String name);
 }

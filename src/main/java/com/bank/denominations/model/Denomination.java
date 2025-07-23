@@ -1,5 +1,6 @@
 package com.bank.denominations.model;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Version;
@@ -12,12 +13,13 @@ public record Denomination(
         Integer id,
         String name,
         String currency,
+        @NotNull
         BigDecimal value,
         boolean coin,
         Integer bundledQuantity,
         Integer baggedQuantity,
         Integer plasticQuantity,
         @Version
-        Integer version
+        Long version
 ) {
 }
